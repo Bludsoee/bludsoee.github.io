@@ -220,20 +220,17 @@ span {
 }
 
 @keyframes words {
-    0%, 20% {
+    0%, 25% {
         content: "security";
     }
-    21%, 40% {
+    26%, 50% {
         content: "front-end";
     }
-    41%, 60% {
+    51%, 75% {
         content: "security";
     }
-    61%, 80% {
+    76%, 100% {
         content: "front-end";
-    }
-    81%, 100% {
-        content: "security";
     }
 }
 
