@@ -17,7 +17,6 @@
     -->
     <header>
         <a href="#">bludsoe</a>
-
         <nav>
             <a href="#"> About</a>
             <a href="#work"> Work Experience</a>
@@ -54,13 +53,13 @@
                 <img src="static/work_experience/bekk.jpg" alt="Bekk Logo" />
                 <div class="work-title">
                     <h3>Security Developer Internship</h3>
-                    <a href="">Bekk Consulting</a>
+                    <a href="https://bekk.no/" target="_blank">Bekk Consulting</a>
                     <p>June 2025 - August 2025</p>
                 </div>
             </div>
 
             <p class="work-description">
-                COMING AUGUST 2025
+                WORK DESCRIPTION COMING AUGUST 2025
             </p>
 
             <div class="work-tags"></div>
@@ -71,13 +70,21 @@
                 <img src="static/work_experience/lunarclient.png" alt="Lunar Logo" />
                 <div class="work-title">
                     <h3>Quality Assurance</h3>
-                    <a href="">Moonsworth, Lunar Client</a>
+                    <a href="https://lunarclient.com/" target="_blank">Moonsworth, Lunar Client</a>
                     <p>October 2024 - Present</p>
                 </div>
             </div>
 
             <p class="work-description">
-                
+                As a member of the quality assurance team at Lunar Client, my job was to test and quality check all new features that was being added to the client. Lunar Client is a client for Minecraft, with several mods to improve the experience and gameplay. It is also the biggest client in the world, which is why our job is important.
+                <span id="more-qa" style="display: none;">
+                    <br><br>
+                    In addition to testing the client, I have recently been promoted within the team, giving me more responsibility such as updating the bug tracking site with new bugs reported by the team. I am also responsible for verifying bug reports of newer members of the team, to then add these to the bug tracker.
+                    <br><br>
+                    Finally, I also receive bug reports from the community, which we as a team check to see if they can be reproduced in controlled environments, and if they can, we add them to the bug tracker. 
+                </span>
+                <br>
+                <button onclick="toggleQAText()" id="toggleBtn-qa" class="view-more-btn">View More</button>
             </p>
 
             <div class="work-tags">
@@ -90,14 +97,19 @@
             <div class="work-header">
                 <img src="static/work_experience/uib.jpg" alt="UiB Logo" />
                 <div class="work-title">
-                    <h3>Consultant</h3>
-                    <a href="">University of Bergen</a>
+                    <h3>Teaching Assistant</h3>
+                    <a href="https://uib.no/" target="_blank">University of Bergen</a>
                     <p>August 2023 - May 2025</p>
                 </div>
             </div>
 
             <p class="work-description">
-                
+                As a teaching assistant, my role was to lead group sessions where other students could ask for help with various problems related to the course. I also acted as a liaison between the students and the lecturer, allowing us to raise issues or provide feedback during our weekly meetings with the lecturer.
+                <span id="more-ta" style="display: none;">
+                    <br><br>
+                    In addition to this, I assessed student assignments, reviewing their work and providing feedback on what they did well and what could be improved for future submissions. The course itself was an introduction to programming, with all work conducted using Python. This role gave me valuable experience in teamwork, debugging, programming, time management, problem-solving, and more
+                </span>
+                <button onclick="toggleTAText()" id="toggleBtn-ta" class="view-more-btn">View More</button>
             </p>
 
             <div class="work-tags"></div>
@@ -109,7 +121,6 @@
     -->
     <section id="skills" class="skills">
         <div class="skills-content">
-            <p> Hello World</p>
         </div>
     </section>
 
@@ -118,7 +129,6 @@
     -->
     <section id="projects" class="projects">
         <div class="projects-content">
-            <p> Hello World</p>
         </div>
     </section>
 
@@ -144,3 +154,37 @@
 </body>
 
 </html>
+
+<script>
+    var shouldLessQA = false;
+    var shouldLessTA = false;
+    function toggleQAText() {
+        let moreTextQA = document.getElementById("more-qa");
+        let btnTextQA = document.getElementById("toggleBtn-qa");
+    
+        if (shouldLessQA) {
+            shouldLessQA = false
+            btnTextQA.innerHTML = "View More";
+            moreTextQA.style.display = "none";
+        } else {
+            shouldLessQA = true
+            btnTextQA.innerHTML = "View Less";
+            moreTextQA.style.display = "inline";
+        }
+    }
+
+    function toggleTAText() {
+        let moreTextTA = document.getElementById("more-ta");
+        let btnTextTA = document.getElementById("toggleBtn-ta");
+
+        if (shouldLessTA) {
+            shouldLessTA = false
+            btnTextTA.innerHTML = "View More";
+            moreTextTA.style.display = "none";
+        } else {
+            shouldLessTA = true
+            btnTextTA.innerHTML = "View Less";
+            moreTextTA.style.display = "inline";
+        }
+    }
+</script>    

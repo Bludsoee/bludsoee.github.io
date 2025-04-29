@@ -136,7 +136,8 @@ footer {
             }
         } 
         p {
-            font-size: 1.6rem;
+            margin-top: 5rem;
+            font-size: 1.8rem;
             font-weight: 300;
         }
         p a {
@@ -149,7 +150,7 @@ footer {
         border-radius: 50%;
         img {
             position: relative;
-            width: 32vw;
+            width: 20vw;
             border-radius: 20%;
             box-shadow: 0 0 15px cornflowerblue;
             transition: .3s ease;
@@ -163,7 +164,7 @@ footer {
 }
 // Styling for the about part of the website
 .work {
-    padding: 10rem 50rem;
+    padding: 10rem 15rem;
     text-align: center;
     h2 {
         font-size: 7rem;
@@ -208,10 +209,25 @@ footer {
             }
         }
         .work-description {
-            font-size: 1.5rem;
-            color: #ccc;
-            margin-bottom: 1rem; 
+            font-size: 1.9rem;
+            color: #ccc; 
             line-height: 1.5;
+            .view-more-btn {
+              background-color: cornflowerblue;
+              color: white;
+              border: none;
+              padding: 0.8rem 1.5rem;
+              font-size: 1.2rem;
+              border-radius: 1.5rem;
+              cursor: pointer;
+              transition: 0.3s ease;
+              display: block;
+              margin-left: auto; /* This pushes it to the right */
+              &:hover {
+                background-color: rgb(0, 89, 255);
+                transform: scale(1.1);
+              }
+            }
         }
         .work-tags {
             display: flex;
@@ -222,6 +238,7 @@ footer {
                 padding: .5rem 1rem;
                 border-radius: 9999px;
                 font-size: 1.2rem;
+                margin-top: 1rem;
                 color: #89caff;
             }
         }

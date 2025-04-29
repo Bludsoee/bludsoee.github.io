@@ -140,7 +140,8 @@ footer .sourcecode {
   animation: cursor 0.6s infinite;
 }
 .about .about-content p {
-  font-size: 1.6rem;
+  margin-top: 5rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 .about .about-content p a {
@@ -153,7 +154,7 @@ footer .sourcecode {
 }
 .about .about-img img {
   position: relative;
-  width: 32vw;
+  width: 20vw;
   border-radius: 20%;
   box-shadow: 0 0 15px cornflowerblue;
   transition: 0.3s ease;
@@ -164,7 +165,7 @@ footer .sourcecode {
 }
 
 .work {
-  padding: 10rem 50rem;
+  padding: 10rem 15rem;
   text-align: center;
 }
 .work h2 {
@@ -208,10 +209,25 @@ footer .sourcecode {
   color: #aaa;
 }
 .work .work-card .work-description {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #ccc;
-  margin-bottom: 1rem;
   line-height: 1.5;
+}
+.work .work-card .work-description .view-more-btn {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin-left: auto; /* This pushes it to the right */
+}
+.work .work-card .work-description .view-more-btn:hover {
+  background-color: rgb(0, 89, 255);
+  transform: scale(1.1);
 }
 .work .work-card .work-tags {
   display: flex;
@@ -223,6 +239,7 @@ footer .sourcecode {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 1.2rem;
+  margin-top: 1rem;
   color: #89caff;
 }
 
