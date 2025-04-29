@@ -127,7 +127,7 @@ footer .sourcecode {
 }
 .about .about-content h3 span::before {
   content: "security";
-  animation: words 20s infinite;
+  animation: words 10s infinite;
 }
 .about .about-content h3 span::after {
   content: "";
@@ -164,9 +164,66 @@ footer .sourcecode {
 }
 
 .work {
+  padding: 10rem 50rem;
+  text-align: center;
+}
+.work h2 {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+.work .work-card {
+  background-color: rgb(21, 21, 21);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border: 1px solid;
+  border-width: 1px;
+  border-color: rgb(108, 108, 108);
+  box-shadow: 0 4px 10x rgba(0, 0, 0, 0.5);
+}
+.work .work-card .work-header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 1.5rem;
+}
+.work .work-card .work-header img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+}
+.work .work-card .work-header .work-title h3 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+.work .work-card .work-header .work-title a {
+  font-size: 2rem;
+  color: #5fa855;
+  text-decoration: none;
+}
+.work .work-card .work-header .work-title p {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+.work .work-card .work-description {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.work .work-card .work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.work .work-card .work-tags span {
+  background-color: #2e2e2e;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  color: #89caff;
 }
 
 @keyframes cursor {
@@ -188,39 +245,72 @@ footer .sourcecode {
     content: "front-end";
   }
 }
-/* 
-Mobile / Tablet Styling
-*/
 @media (max-width: 995px) {
-  header nav {
-    position: absolute;
-    align-items: start;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem solid;
-    background-color: rgba(32, 32, 32, 0.955);
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 1.5rem 5%;
   }
   header nav a {
-    display: block;
-    font-size: 2rem;
-    margin: 2rem 0;
-    padding-right: 2rem;
-    border-bottom: 1px solid;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 5rem 5%;
   }
   .about {
     flex-direction: column;
-    margin: 5rem 4rem;
+    gap: 4rem;
+    text-align: center;
+  }
+  .about .about-img img {
+    width: 60vw;
+  }
+  .about .about-content h1 {
+    font-size: 4rem;
   }
   .about .about-content h3 {
     font-size: 2.5rem;
   }
-  .about-content h1 {
+  .about .about-content p {
+    font-size: 1.4rem;
+  }
+  .work {
+    padding: 5rem 5%;
+  }
+  .work h2 {
     font-size: 5rem;
   }
-  .about-img img {
-    width: 70vh;
-    margin-top: 4rem;
+  .work .work-card {
+    padding: 1.5rem;
+  }
+  .work .work-card .work-header img {
+    width: 70px;
+    height: 70px;
+  }
+  .work .work-card .work-header .work-title h3 {
+    font-size: 2.2rem;
+  }
+  .work .work-card .work-header .work-title a {
+    font-size: 1.8rem;
+  }
+  .work .work-card .work-header .work-title p {
+    font-size: 1.2rem;
+  }
+  .work .work-card .work-description {
+    font-size: 1.4rem;
+  }
+  .work .work-card .work-tags span {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+  footer nav a {
+    font-size: 2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 }
 

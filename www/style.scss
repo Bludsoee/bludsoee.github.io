@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
-
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +8,10 @@
     outline: none;
     font-family: "Poppins", sans-serif;
 }
-
 html {
     font-size: 62%;
     scroll-behavior: smooth;
 }
-
 body {
     width: 100%;
     height: 100vh;
@@ -22,12 +19,10 @@ body {
     background-color: rgb(32, 32, 32);
     color: white;
 }
-
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
-
 header {
     margin-top: 20px;
     position: fixed;
@@ -44,27 +39,22 @@ header {
     padding-top: 1.5rem;
     margin-top: 0;
     background-color: rgba(32, 32, 32, 0.955);
-
-
     a {
         font-size: 3rem;
         color: cornflowerblue;
         font-weight: 800;
         cursor: pointer;
         transition: .5s ease;
-    
         &:hover {
             transform: scale(1.5);
         }
     }
-
     nav a {
         font-size: 1.8rem;
         color: darkgray;
         margin-left: 4rem;
         font-weight: 500;
         transition: .3s ease;
-
         &:hover {
             padding: 1rem;
             border-radius: .5rem;
@@ -75,7 +65,6 @@ header {
         }
     }
 }
-
 footer {
     position: fixed;
     font-size: 1.4rem;
@@ -87,7 +76,6 @@ footer {
     text-align: center;
     padding: 1rem;
     z-index: 1000;
-
     nav a {
         position: relative;
         display: inline-block;
@@ -99,17 +87,14 @@ footer {
         z-index: 100;
         transition: transform 0.3s ease;
         color: cornflowerblue; 
-
         &:hover {
             transform: scale(1.5);
         }
     }
-
     .sourcecode {
         color: rgb(255, 248, 157);
     }
 }
-
 // styling for the about part of the page
 .about {
     display: flex;
@@ -117,7 +102,6 @@ footer {
     align-items: center;
     gap: 8rem;
     background-color: transparent;
-
     .about-content {
         h1 {
             font-size: 6rem;
@@ -128,22 +112,18 @@ footer {
         h1 span {
             color: cornflowerblue;
         }
-
         h3 {
             font-size: 34px;
             font-weight: 600;
             min-width: 280px;
         }
-
         h3 span {
             position: relative;
             color: rgb(255, 248, 157);
-
             &::before {
                 content: "security";
-                animation: words 20s infinite;
+                animation: words 10s infinite;
             }
-
             &::after {
                 content: "";
                 background-color: transparent;
@@ -154,13 +134,11 @@ footer {
                 right: -8;
                 animation: cursor .6s infinite;
             }
-        }
-
+        } 
         p {
             font-size: 1.6rem;
             font-weight: 300;
         }
-
         p a {
             color: cornflowerblue;
             border-bottom: .3rem;
@@ -169,7 +147,6 @@ footer {
     }
     .about-img {
         border-radius: 50%;
-
         img {
             position: relative;
             width: 32vw;
@@ -184,81 +161,164 @@ footer {
         }
     }
 }
-
 // Styling for the about part of the website
 .work {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: transparent;
+    padding: 10rem 50rem;
+    text-align: center;
+    h2 {
+        font-size: 7rem;
+        margin-bottom: 3rem; 
+        color: white;
+    }
+    .work-card {
+        background-color: rgb(21, 21, 21);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: left;
+        border: 1px solid;
+        border-width: 1px;
+        border-color: rgb(108, 108, 108);
+        box-shadow: 0 4px 10x rgba(0, 0, 0, 0.5);
+        .work-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            
+            img {
+                width: 100px;
+                height: 100px;
+                margin-right: 1rem;
+            }
+            .work-title {
+                h3 {
+                    font-size: 3rem;
+                    margin: 0;
+                    color: white;
+                }
+                a {
+                    font-size: 2rem;
+                    color: #5fa855;
+                    text-decoration: none;
+                }
+                p {
+                    font-size: 1.5rem;
+                    color: #aaa;
+                }
+            }
+        }
+        .work-description {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-bottom: 1rem; 
+            line-height: 1.5;
+        }
+        .work-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            span {
+                background-color: #2e2e2e;
+                padding: .5rem 1rem;
+                border-radius: 9999px;
+                font-size: 1.2rem;
+                color: #89caff;
+            }
+        }
+    }
 }
-
 @keyframes cursor {
     to {
         border-left: 3px solid rgb(255, 248, 157);
     }
 }
-
 @keyframes words {
-    0%,
-    25% {
+    0%,25% {
         content: "security";
     }
-
-    26%,
-    50% {
+    26%,50% {
         content: "front-end";
     }
-
-    51%,
-    75% {
+    51%,75% {
         content: "security";
     }
-
-    76%,
-    100% {
+    76%,100% {
         content: "front-end";
     }
 }
-
-/* 
-Mobile / Tablet Styling
-*/
+// Mobile or tablet styling
 @media (max-width: 995px) {
-    header nav {
-        position: absolute;
-        align-items: start;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem solid;
-        background-color: rgba(32, 32, 32, 0.955);
+    html {
+      font-size: 55%;
     }
-
-    header nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 2rem 0;
-        padding-right: 2rem;
-        border-bottom: 1px solid;
+    header {
+      padding: 1.5rem 5%;
+      nav a {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+      }
     }
-
+    section {
+      padding: 5rem 5%;
+    }
     .about {
-        flex-direction: column;
-        margin: 5rem 4rem;
+      flex-direction: column;
+      gap: 4rem;
+      text-align: center;
+      .about-img img {
+        width: 60vw;
+      }
+      .about-content {
+        h1 {
+          font-size: 4rem;
+        }
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
     }
-
-    .about .about-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .about-content h1 {
+    .work {
+      padding: 5rem 5%;
+      h2 {
         font-size: 5rem;
+      }
+      .work-card {
+        padding: 1.5rem;
+        .work-header {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+          .work-title {
+            h3 {
+              font-size: 2.2rem;
+            }
+            a {
+              font-size: 1.8rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .work-description {
+          font-size: 1.4rem;
+        }
+        .work-tags span {
+          font-size: 1rem;
+        }
+      }
     }
-
-    .about-img img {
-        width: 70vh;
-        margin-top: 4rem;
+    footer {
+      font-size: 1.2rem;
+      nav a {
+        font-size: 2rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
     }
-}
+  }
+  
