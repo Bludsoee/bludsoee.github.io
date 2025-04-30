@@ -74,7 +74,6 @@ footer {
   position: fixed;
   font-size: 1.4rem;
   font-weight: 2rem;
-  margin-bottom: 5px;
   bottom: 0;
   width: 100%;
   background-color: rgba(32, 32, 32, 0.955);
@@ -124,10 +123,6 @@ footer .sourcecode {
 .about .about-content h3 span {
   position: relative;
   color: rgb(255, 248, 157);
-}
-.about .about-content h3 span::before {
-  content: "security";
-  animation: words 10s infinite;
 }
 .about .about-content h3 span::after {
   content: "";
@@ -223,7 +218,8 @@ footer .sourcecode {
   cursor: pointer;
   transition: 0.3s ease;
   display: block;
-  margin-left: auto; /* This pushes it to the right */
+  margin-left: auto;
+  /* This pushes it to the right */
 }
 .work .work-card .work-description .view-more-btn:hover {
   background-color: rgb(0, 89, 255);
@@ -246,20 +242,6 @@ footer .sourcecode {
 @keyframes cursor {
   to {
     border-left: 3px solid rgb(255, 248, 157);
-  }
-}
-@keyframes words {
-  0%, 25% {
-    content: "security";
-  }
-  26%, 50% {
-    content: "front-end";
-  }
-  51%, 75% {
-    content: "security";
-  }
-  76%, 100% {
-    content: "front-end";
   }
 }
 @media (max-width: 995px) {

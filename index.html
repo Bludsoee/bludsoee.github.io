@@ -20,7 +20,6 @@
         <nav>
             <a href="#"> About</a>
             <a href="#work"> Work Experience</a>
-            <a href="#skills"> Skills</a>
             <a href="#projects"> Personal Projects</a>
         </nav>
     </header>
@@ -34,11 +33,13 @@
         </div>
         <div class="about-content">
             <h1> Hi, my name is <span> Bludsoe</span></h1>
-            <h3>I'm a <span></span> developer</h3>
+            <h3>I'm a <span id="typing-text"></span> developer</h3>
             <p> I'm a university student, currently taking a master's degree in information security.
                 <br>
-                At the side I work with quality assurance at <a class="text-link" href="https://lunarclient.com/" target="_blank"> Lunar
-                    Client</a>, the largest Minecraft client in the world, <br>having over 2 million users and 17 million
+                At the side I work with quality assurance at <a class="text-link" href="https://lunarclient.com/"
+                    target="_blank"> Lunar
+                    Client</a>, the largest Minecraft client in the world, <br>having over 2 million users and 17
+                million
                 downloads.
             </p>
         </div>
@@ -77,15 +78,23 @@
             </div>
 
             <p class="work-description">
-                As a member of the quality assurance team at Lunar Client, my job was to test and quality check all new features that was being added to the client. Lunar Client is a client for Minecraft, with several mods to improve the experience and gameplay. It is also the biggest client in the world, which is why our job is important.
+                As a member of the quality assurance team at Lunar Client, my job was to test and quality check all new
+                features that was being added to the client. Lunar Client is a client for Minecraft, with several mods
+                to improve the experience and gameplay. It is also the biggest client in the world, which is why our job
+                is important.
                 <span id="more-qa" style="display: none;">
                     <br><br>
-                    In addition to testing the client, I have recently been promoted within the team, giving me more responsibility such as updating the bug tracking site with new bugs reported by the team. I am also responsible for verifying bug reports of newer members of the team, to then add these to the bug tracker.
+                    In addition to testing the client, I have recently been promoted within the team, giving me more
+                    responsibility such as updating the bug tracking site with new bugs reported by the team. I am also
+                    responsible for verifying bug reports of newer members of the team, to then add these to the bug
+                    tracker.
                     <br><br>
-                    Finally, I also receive bug reports from the community, which we as a team check to see if they can be reproduced in controlled environments, and if they can, we add them to the bug tracker. 
+                    Finally, I also receive bug reports from the community, which we as a team check to see if they can
+                    be reproduced in controlled environments, and if they can, we add them to the bug tracker.
                 </span>
                 <br>
-                <button onclick="toggleQAText()" id="toggleBtn-qa" class="view-more-btn">View More</button>
+                <button onclick="toggleText('more-qa', 'toggleBtn-qa', 'showAllQA')" id="toggleBtn-qa"
+                    class="view-more-btn">View More</button>
             </p>
 
             <div class="work-tags">
@@ -105,23 +114,21 @@
             </div>
 
             <p class="work-description">
-                As a teaching assistant, my role was to lead group sessions where other students could ask for help with various problems related to the course. I also acted as a liaison between the students and the lecturer, allowing us to raise issues or provide feedback during our weekly meetings with the lecturer.
+                As a teaching assistant, my role was to lead group sessions where other students could ask for help with
+                various problems related to the course. I also acted as a liaison between the students and the lecturer,
+                allowing us to raise issues or provide feedback during our weekly meetings with the lecturer.
                 <span id="more-ta" style="display: none;">
                     <br><br>
-                    In addition to this, I assessed student assignments, reviewing their work and providing feedback on what they did well and what could be improved for future submissions. The course itself was an introduction to programming, with all work conducted using Python. This role gave me valuable experience in teamwork, debugging, programming, time management, problem-solving, and more
+                    In addition to this, I assessed student assignments, reviewing their work and providing feedback on
+                    what they did well and what could be improved for future submissions. The course itself was an
+                    introduction to programming, with all work conducted using Python. This role gave me valuable
+                    experience in teamwork, debugging, programming, time management, problem-solving, and more
                 </span>
-                <button onclick="toggleTAText()" id="toggleBtn-ta" class="view-more-btn">View More</button>
+                <button onclick="toggleText('more-ta', 'toggleBtn-ta', 'showAllTA')" id="toggleBtn-ta"
+                    class="view-more-btn">View More</button>
             </p>
 
             <div class="work-tags"></div>
-        </div>
-    </section>
-
-    <!-- 
-    Section for the skills part of the portfolio page
-    -->
-    <section id="skills" class="skills">
-        <div class="skills-content">
         </div>
     </section>
 
@@ -157,35 +164,48 @@
 </html>
 
 <script>
-    var shouldLessQA = false;
-    var shouldLessTA = false;
-    function toggleQAText() {
-        let moreTextQA = document.getElementById("more-qa");
-        let btnTextQA = document.getElementById("toggleBtn-qa");
-    
-        if (shouldLessQA) {
-            shouldLessQA = false
-            btnTextQA.innerHTML = "View More";
-            moreTextQA.style.display = "none";
+    var showAllQA = false;
+    var showAllTA = false;
+
+    function toggleText(contentId, buttonId, flag) {
+        let moreText = document.getElementById(contentId)
+        let btnText = document.getElementById(buttonId)
+
+        if (window[flag]) {
+            window[flag] = false;
+            btnText.innerHTML = "View More";
+            moreText.style.display = "none";
         } else {
-            shouldLessQA = true
-            btnTextQA.innerHTML = "View Less";
-            moreTextQA.style.display = "inline";
+            window[flag] = true;
+            btnText.innerHTML = "View Less";
+            moreText.style.display = "inline";
         }
     }
 
-    function toggleTAText() {
-        let moreTextTA = document.getElementById("more-ta");
-        let btnTextTA = document.getElementById("toggleBtn-ta");
+    var typingWords = ["security", "front-end"]
+    let currentWordIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
 
-        if (shouldLessTA) {
-            shouldLessTA = false
-            btnTextTA.innerHTML = "View More";
-            moreTextTA.style.display = "none";
+    var typingElement = document.getElementById("typing-text")
+
+    function typingText() {
+        var currentWord = typingWords[currentWordIndex]
+        if (isDeleting) {
+            currentCharIndex--;
         } else {
-            shouldLessTA = true
-            btnTextTA.innerHTML = "View Less";
-            moreTextTA.style.display = "inline";
+            currentCharIndex++;
         }
+        typingElement.textContent = currentWord.substring(0, currentCharIndex)
+
+        if (!isDeleting && currentCharIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1000)
+        } else if (isDeleting && currentCharIndex === 0) {
+            isDeleting = false;
+            currentWordIndex = (currentWordIndex + 1) % typingWords.length
+        }
+        setTimeout(typingText, isDeleting ? 50 : 100)
     }
-</script>    
+
+    typingText();
+</script>
