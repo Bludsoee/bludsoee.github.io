@@ -99,7 +99,7 @@ footer {
     color: cornflowerblue;
 
     &:hover {
-      transform: scale(1.5);
+      transform: translateY(-5px);
     }
   }
 
@@ -188,7 +188,7 @@ footer {
   h2 {
     font-size: 7rem;
     margin-bottom: 3rem;
-    color: white;
+    color: rgb(255, 248, 157);
   }
 
   .work-card {
@@ -270,6 +270,98 @@ footer {
         font-size: 1.2rem;
         margin-top: 1rem;
         color: #89caff;
+      }
+    }
+  }
+}
+
+.projects {
+  padding: 5rem 2rem;
+  text-align: left;
+
+  h2 {
+    color: rgb(255, 248, 157);
+    font-size: 8rem;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    a {
+      color: rgb(183, 177, 91);
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgb(183, 177, 91);
+    }
+  }
+
+  .project-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    .project-card {
+      max-width: 400px;
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+
+      .project-card-main {
+        background-color: transparent;
+
+        .project-img {
+          display: block;
+          background-color: transparent;
+
+          img {
+            display: block;
+            background-color: transparent;
+            width: 400px;
+            height: 350px;
+            border-radius: 10%;
+            border: 3px solid cornflowerblue;
+            transition: all .3s ease;
+          }
+
+          &:hover img {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px cornflowerblue;
+          }
+        }
+
+        a {
+          color: cornflowerblue;
+          font-size: 3rem;
+          display: inline-block;
+          margin-top: 1rem;
+        }
+      }
+
+      .project-description {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+
+        b {
+          color: rgb(231, 83, 83);
+        }
+      }
+
+      .languages {
+        text-align: center;
+
+        span {
+          font-size: 1.3rem;
+          font-weight: 300;
+          background-color: rgb(59, 58, 58);
+          margin: .5rem;
+          padding: .5rem;
+          border-radius: 20%;
+          border: 2px solid #5fa855;
+        }
       }
     }
   }

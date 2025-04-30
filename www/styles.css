@@ -94,7 +94,7 @@ footer nav a {
   color: cornflowerblue;
 }
 footer nav a:hover {
-  transform: scale(1.5);
+  transform: translateY(-5px);
 }
 footer .sourcecode {
   color: rgb(255, 248, 157);
@@ -166,7 +166,7 @@ footer .sourcecode {
 .work h2 {
   font-size: 7rem;
   margin-bottom: 3rem;
-  color: white;
+  color: rgb(255, 248, 157);
 }
 .work .work-card {
   background-color: rgb(21, 21, 21);
@@ -237,6 +237,84 @@ footer .sourcecode {
   font-size: 1.2rem;
   margin-top: 1rem;
   color: #89caff;
+}
+
+.projects {
+  padding: 5rem 2rem;
+  text-align: left;
+}
+.projects h2 {
+  color: rgb(255, 248, 157);
+  font-size: 8rem;
+  text-align: center;
+}
+.projects h4 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.projects h4 a {
+  color: rgb(183, 177, 91);
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgb(183, 177, 91);
+}
+.projects .project-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.projects .project-content .project-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+.projects .project-content .project-card .project-card-main {
+  background-color: transparent;
+}
+.projects .project-content .project-card .project-card-main .project-img {
+  display: block;
+  background-color: transparent;
+}
+.projects .project-content .project-card .project-card-main .project-img img {
+  display: block;
+  background-color: transparent;
+  width: 400px;
+  height: 350px;
+  border-radius: 10%;
+  border: 3px solid cornflowerblue;
+  transition: all 0.3s ease;
+}
+.projects .project-content .project-card .project-card-main .project-img:hover img {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px cornflowerblue;
+}
+.projects .project-content .project-card .project-card-main a {
+  color: cornflowerblue;
+  font-size: 3rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.projects .project-content .project-card .project-description {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.projects .project-content .project-card .project-description b {
+  color: rgb(231, 83, 83);
+}
+.projects .project-content .project-card .languages {
+  text-align: center;
+}
+.projects .project-content .project-card .languages span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-color: rgb(59, 58, 58);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 20%;
+  border: 2px solid #5fa855;
 }
 
 @keyframes cursor {
