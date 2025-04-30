@@ -83,7 +83,7 @@ footer {
   width: 100%;
   background-color: rgba(32, 32, 32, 0.955);
   text-align: center;
-  padding: 1rem;
+  padding: .5rem;
   z-index: 1000;
 
   nav a {
@@ -281,7 +281,7 @@ footer {
 
   h2 {
     color: rgb(255, 248, 157);
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
   }
 
@@ -294,7 +294,13 @@ footer {
       color: rgb(183, 177, 91);
       font-size: 1.5rem;
       border-bottom: 1px solid rgb(183, 177, 91);
+      transition: all .3s ease;
+
+      &:hover {
+        color: rgb(255, 248, 157);
+      }
     }
+
   }
 
   .project-content {
