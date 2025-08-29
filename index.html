@@ -65,6 +65,32 @@
                     <p>August 2025 - Present</p>
                 </div>
             </div>
+
+            <p class="work-description">
+                As a teaching assistant in the course IN2120 - Introduction to Information Security, my role was to lead
+                group sessions where other students could ask for help with various problems related to the course.
+                I also acted as a liaison between the students and the lecturer, allowing us to raise issues or provide
+                feedback during our weekly meetings with the lecturer.
+
+                <span id="more-uio" style="display: none;">
+                    <br><br>
+                    The course itself is a beginner course for people wanting to learn about information security. This
+                    role
+                    gave me valuable experience in teamwork, security, penetration testing, cryptography,
+                    time management, problem-solving, and more.
+                </span>
+                <br>
+                <button onclick="toggleText('more-uio', 'toggleBtn-uio', 'showAllUiO')" id="toggleBtn-uio"
+                    class="view-more-btn">View More</button>
+            </p>
+
+            <div class="work-tags">
+                <span>Security</span>
+                <span>Pen-testing</span>
+                <span>Cryptography</span>
+                <span>Time Management</span>
+                <span>Problem Solving</span>
+            </div>
         </div>
 
         <!-- 
@@ -295,6 +321,7 @@
     var showAllQA = false;
     var showAllTA = false;
     var showAllBekk = false;
+    var showAllUiO = false;
 
     function toggleText(contentId, buttonId, flag) {
         let moreText = document.getElementById(contentId)
